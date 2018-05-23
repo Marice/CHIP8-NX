@@ -1,4 +1,4 @@
-# Swip8
+# CHIP8-NX 0.1
 A CHIP8 emulator for the Nintendo Switch
 
 * All possible switch buttons mapped to 1-15 
