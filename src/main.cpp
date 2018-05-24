@@ -1,23 +1,18 @@
-
 #include <iostream>
 #include <cstdint>
 #include <string>
 #include <fstream>
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_events.h>
 #include <stdbool.h>
 #include <stdio.h>
-#include "chip8.h"
 #include <dirent.h>
 #include <switch.h>
-
-void usage(char ** argv);
-
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_events.h>
+#include "chip8.h"
 
 int getInd(char* curFile, int curIndex) {
     DIR* dir;
     struct dirent* ent;
-
 
     if(curIndex < 0)
         curIndex = 0;
@@ -40,10 +35,9 @@ int getInd(char* curFile, int curIndex) {
             curIndex--;
         closedir(dir);
     }
+
     return curIndex;
 }
-
-
 
 void getFile(char* curFile)
 {
@@ -56,7 +50,7 @@ void getFile(char* curFile)
     sprintf(curFile, "Couldn't find any files in that folder!");
     int curIndex = 0;
     curIndex = getInd(curFile, curIndex);
-    printf("\x1b[18;20H%s", curFile);
+    printf("\x1b[18;10H%s", curFile);
 	
     while(appletMainLoop())
     {
@@ -96,9 +90,6 @@ void getFile(char* curFile)
     consoleClear();
     gfxExit();
 }
-
-
-
 
 int main(int argc, char *argv[])
 {
