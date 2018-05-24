@@ -35,12 +35,12 @@ SOURCES		  :=	src
 DATA		  :=	dat
 INCLUDES	  :=	include
 EXEFS_SRC	  :=	exefs_src
-ROMFS         :=  romfs
-APP_VERSION   := 0.1
-ICON          := icon.jpg
+ROMFS         :=    romfs
+APP_VERSION   :=    0.3
+ICON          :=    icon.jpg
 
-APP_TITLE     := CHIP8-NX
-APP_AUTHOR    := Marice Lamain
+APP_TITLE     :=	CHIP8-NX
+APP_AUTHOR    := 	Marice Lamain
 
 
 #---------------------------------------------------------------------------------
